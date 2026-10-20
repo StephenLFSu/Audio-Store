@@ -60,7 +60,7 @@ public class MyAudioUI
 				}
 				// Download audiocontent (song/audiobook/podcast) from the store 
 				// Specify the index of the content
-				else if (action.equalsIgnoreCase("SINGLEDOWNLOAD")) //This is the single download varient which calls on the download method.
+				else if (action.equalsIgnoreCase("DOWNLOAD")) //This is the single download varient which calls on the download method.
 				{
 					int startIndex = 0;
 					
@@ -217,10 +217,7 @@ public class MyAudioUI
 						seasonIndex = scanner.nextInt();
 						scanner.nextLine();
 					}
-					if(!mylibrary.printPodcastEpisodes(podcastIndex, seasonIndex))
-					{
-						System.out.println(mylibrary.getErrorMessage());
-					}
+					mylibrary.printPodcastEpisodes(podcastIndex, seasonIndex);
 				}
 				// Similar to playsong above except for podcast
 				// In addition to the podcast index from the list of podcasts, 
@@ -249,10 +246,7 @@ public class MyAudioUI
 						episodeIndex = scanner.nextInt();
 						scanner.nextLine();
 					}
-					if(!mylibrary.playPodcast(podcastIndex, seasonIndex, episodeIndex)) 
-					{
-						System.out.println(mylibrary.getErrorMessage());
-					}
+					mylibrary.playPodcast(podcastIndex, seasonIndex, episodeIndex);
 				}
 				// Specify a playlist title (string) 
 				// Play all the audio content (songs, audiobooks, podcasts) of the playlist 
