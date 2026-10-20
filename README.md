@@ -207,3 +207,9 @@ The program reads `store.txt` from the folder you run it in, so keep `store.txt`
 
 **Not yet tested**
 - Only the error cases have been run. The other commands compile but haven't been tested end to end.
+
+## Future Plans
+
+- Load the store from a database instead of the local store.txt file
+- Add an audio engine and a graphical interface. Neither exists yet
+- Add a shuffle option to change the order of a playlist 
